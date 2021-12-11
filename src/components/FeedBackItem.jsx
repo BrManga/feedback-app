@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Card from "./shared/Card"
 import PropTypes from 'prop-types'
 import {FaTimes} from "react-icons/fa"
 function FeedBackItem({item, handleDelete}) {
-    // const [rating, setRating] = useState(7)
-    // const [text, setText] = useState('Text')
 
     return (
         <Card reverse>
@@ -12,7 +10,7 @@ function FeedBackItem({item, handleDelete}) {
             <button className="close" onClick={()=>handleDelete(item.id)}>
                 <FaTimes color='purple'/>
             </button>
-            <div className="text-displa">{item.text}</div>
+            <div className="text-display">{item.text}</div>
         </Card>
     )
 }
