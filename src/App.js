@@ -22,7 +22,7 @@ const addFeedback=(newFeedback)=>{
         <div className='container'>
             <Header />
             <FeedbackForm handleAdd={addFeedback}/>
-            <FeedbackStats feedback={feedback}/>
+            {feedback.length>0&&<FeedbackStats feedback={feedback}/>}
             <FeedbackList feedback={feedback} handleDelete={(item)=>handleDelete(item)} />
         </div>
     )
